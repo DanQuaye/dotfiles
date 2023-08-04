@@ -16,15 +16,25 @@ brewsetup() {
 
 basic() {
   local basicbrews=(
+    ansible
+    awscli
     coreutils
+    fzf
+    gh
     git
     git-lfs
-    gh
+    kubectl
     neovim
+    npm
+    pyenv
     reattach-to-user-namespace
+    sops
+    terraform-docs
+    tfenv
+    tgenv
     the_silver_searcher
     tmux
-    fzf
+    yq
   )
   for b in "${basicbrews[@]}"; do
     echo "installing ${b}"
@@ -52,7 +62,9 @@ casks() {
     docker
     iterm2
     slate
+    keeper-password-manager
     vlc
+    
   )
   brew tap caskroom/cask
   for b in "${caskbrews[@]}"; do
